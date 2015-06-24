@@ -22,26 +22,48 @@
 <br><br>
 <div class="col-md-4">
   <div class="monsterPics"><%= image_tag "monster_elephant.jpg", :size => '200x180' %></div><br>
-  <button class="nameButton" onclick="clicker()"> Sean's Banana</button>
+  <button class="nameButton2" onclick="clicker()"> Sean's Banana</button>
   </div>
 <div class="col-md-4">
   <div class="monsterPics"><%= image_tag "monster_bat.jpg", :size => '200x180' %></div><br>
-  <button  class="nameButton" onclick="clicker()">Pedro</button>
+  <button  class="nameButton2" onclick="clicker()">Pedro</button>
 </div>
 
 <div class="col-md-4">
   <div class="monsterPics"><%= image_tag "monster_bigfoot.jpg", :size => '200x180' %></div><br>
-  <button class="nameButton" onclick="clicker()">Steve</button>
+  <button class="nameButton2" onclick="clicker()">Steve</button>
 </div>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <button class="battleStart">BATTLE</button>
+  <button class="battleStart" onclick="clicker()">BATTLE</button>
 
 
 <script>
+  $(document).ready(function(){
+    //Placeholder functionality. Eventually, we want to make it so that
+    //you select a monster for battling and then select your opponent.
+    //Once this has been done, they are each given attack power and defense.
+    //Battle button is clicked, executing the battle function and determines 
+    //if it was a win, loss or tie, alerting the user to the outcome. 
     $('.nameButton').click(function(){
-      //console.log("herpderp");
+      alert('Your monster has been selected')
       //$(".monsterPics").effect( "highlight", {color:"#669966"}, 3000 );
-      alert('here be monsters')
     });
+
+    $('.nameButton2').click(function(){
+      alert('Your opponent has been selected')
+      //$(".monsterPics").effect( "highlight", {color:"#669966"}, 3000 );
+    });
+
+    $('.battleStart').click(function(){
+      var random = Math.floor(Math.random() * 6) + 1;
+      if (random >= 4) {
+        alert('You\'re a winner. Gold star for you.')
+      } else if (random <= 2) {
+        alert('You\'re a failure and should feel bad.')
+      } else {
+        alert('It is a tie. Clearly you didn\'t try hard enough.')
+      }
+    });
+  });
 </script>
