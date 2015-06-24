@@ -1,44 +1,47 @@
+<div class="col-md-12">CHOOSE YOUR MONSTER</div>
+<br><br>
 <div class="col-md-4">
-  <div class="monsterPics"><%= image_tag "monster_bat.jpg", :size => '200x180' %></div>
+  <div class="monsterPics"><%= image_tag "monster_bat.jpg", :size => '200x180' %></div><br>
   <button class="nameButton">Bob</button>
 </div>
 
 <div class="col-md-4">
-  <div class="monsterPics"><%= image_tag "monster_bigfoot.jpg", :size => '200x180' %></div>
+  <div class="monsterPics"><%= image_tag "monster_bigfoot.jpg", :size => '200x180' %></div><br>
   <button class="nameButton">Frank</button>
 </div>
 
 <div class="col-md-4">
-  <div class="monsterPics"><%= image_tag "monster_elephant.jpg", :size => '200x180' %></div>
+  <div class="monsterPics"><%= image_tag "monster_elephant.jpg", :size => '200x180' %></div><br>
   <button class="nameButton" onclick="clicker()">Anita</button>
   </div>
 </div>
 
 
-<br><br><br><br><br><br><br><br><br><br><br>
-
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-md-12">CHOOSE YOUR OPPONENT</div>
+<br><br>
 <div class="col-md-4">
-  <div class="monsterPics"><%= image_tag "monster_elephant.jpg", :size => '200x180' %></div>
+  <div class="monsterPics"><%= image_tag "monster_elephant.jpg", :size => '200x180' %></div><br>
   <button class="nameButton" onclick="clicker()"> Sean's Banana</button>
   </div>
 <div class="col-md-4">
-  <div class="monsterPics"><%= image_tag "monster_bat.jpg", :size => '200x180' %></div>
+  <div class="monsterPics"><%= image_tag "monster_bat.jpg", :size => '200x180' %></div><br>
   <button  class="nameButton" onclick="clicker()">Pedro</button>
 </div>
 
 <div class="col-md-4">
-  <div class="monsterPics"><%= image_tag "monster_bigfoot.jpg", :size => '200x180' %></div>
+  <div class="monsterPics"><%= image_tag "monster_bigfoot.jpg", :size => '200x180' %></div><br>
   <button class="nameButton" onclick="clicker()">Steve</button>
 </div>
 
-
-  <button class="battleStart">Let's butter this muffin.</button>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <button class="battleStart">BATTLE</button>
 
 
 <script>
     $('.nameButton').click(function(){
       //console.log("herpderp");
       //$(".monsterPics").effect( "highlight", {color:"#669966"}, 3000 );
-      alert('yo')
+      alert('here be monsters')
     });
 </script>

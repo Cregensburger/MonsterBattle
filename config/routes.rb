@@ -7,16 +7,17 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root :to => 'users#index'
+  root :to => 'monsters#index'
   resources :user_sessions
   resources :users
   resources :monsters
 
-  get 'matches' => 'matches#index'
+  get 'matches' => 'monsters#index'
   post 'matches' => 'matches#create'
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
