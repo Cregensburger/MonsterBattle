@@ -7,10 +7,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-
-
-
-
   end
 
   # GET /users/1
@@ -40,7 +36,7 @@ class UsersController < ApplicationController
 
       if @user.save
         # auto_login(@user)
-        format.html { redirect_to :users, notice: 'User was successfully created.' }
+        format.html { redirect_to :monsters, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: :users }
       else
         format.html { render :new }
